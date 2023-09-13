@@ -119,7 +119,7 @@ class MailerSend {
             date_to = Math.floor(new Date(new Date(date_to.split('-')).setHours(23, 59, 59)).getTime() / 1000);
         } else if (typeof(today) !== 'undefined') {
             var date_from = Math.floor(new Date(new Date().setHours(0, 0, 0)).getTime() / 1000);
-            var date_to = Math.floor(new Date(new Date().setHours(23, 59, 59)).getTime() / 1000);
+            var date_to = Math.floor(new Date(new Date()).getTime() / 1000);
         } else if (typeof(yesterday) !== 'undefined') {
             var date_from = Math.floor(new Date(new Date().setHours(-23, -59, -59)).getTime() / 1000);
             var date_to = Math.floor(new Date(new Date().setHours(0, 0, 0)).getTime() / 1000);
